@@ -1,0 +1,247 @@
+% Clean CV/Resume Template, by Bennet B <dev@bennet.cc>
+% CC0, Public-Domain
+%
+% based on Modern CV by Habib Semouma
+% https://www.overleaf.com/latex/templates/modern-cv-slash-resume-template/vjrqdkpjckwj
+%
+% 
+\documentclass[oneside]{article}
+
+\usepackage{wallpaper}
+\usepackage{geometry}
+\usepackage[
+    unicode=true,
+    bookmarks=true,
+    bookmarksnumbered=false,
+    bookmarksopen=true,
+    bookmarksopenlevel=1,
+    breaklinks=false,
+    pdfborder={0 0 0},
+    backref=false,
+    colorlinks=false
+    ]{hyperref}
+\usepackage{lastpage}
+\usepackage{hyphenat}
+\usepackage{hyphsubst}
+\usepackage{tabularx}
+\usepackage{moresize}
+\usepackage[document]{ragged2e}
+% \usepackage{parskip}
+
+\usepackage[scaled]{helvet}
+\usepackage{fontawesome5}
+\usepackage[defaultfam,tabular,oldstyle]{montserrat}
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\normalfont}{}{0pt}{}
+\renewcommand{\arraystretch}{1.4}
+\setlength\fboxrule{0pt}
+\setlength\fboxsep{12pt}
+
+\titlespacing{\section}{0pt}{1.5ex plus .1ex minus .2ex}{1pc}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+% Change PDF Meta Info here
+\hypersetup
+{
+    pdftitle={José Rocha - CV - English},
+    pdfauthor={José Rocha},
+    pdfsubject={CV}
+}
+
+% Paper size
+\geometry
+{
+    a4paper,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    nohead,
+    % includefoot,
+    nomarginpar
+}
+
+% Background Color of the Sidebar Column
+\definecolor{sidebg}{cmyk}{1, 0.02, 0, 0.56}
+% Background Color of the Main Column
+\definecolor{mainbg}{cmyk}{0, 0, 0.00, 0.00}
+% Text Color of the Main Column
+\definecolor{maintext}{cmyk}{1, 0.02, 0, 0.8}
+% Text Color of the Sidebar Column
+\definecolor{sidetext}{cmyk}{0, 0, 0.07, 0.04}
+
+\pagecolor{mainbg}
+
+\begin{document}
+\setlength{\topskip}{0pt}\setlength{\footskip}{0pt}%
+\fcolorbox{red}{sidebg}{
+    \begin{minipage}[t][\textheight-2\fboxsep-2\fboxrule][t]{\dimexpr0.4\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{sidetext}
+        
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Nome, Título, Foto
+        \vspace{0.2cm} 
+        {\bfseries\scshape\Huge José Rocha} \\
+        \vspace{0.2cm} \\ 
+        \large Software Engineer \\
+        \vspace{0.5cm} \\
+        \hspace{1.5cm}
+        \begin{tikzpicture}
+            \clip (0,0)  circle (2cm) ;
+            \node[anchor=center] at (0,0) {\includegraphics[scale=0.2]{cv-photo.jpg}}; 
+        \end{tikzpicture}
+
+        \vspace{0.7cm} \\
+        \faUserAstronaut{} & \small Highly committed to individual and teams challenges, I really enjoy thinking about the best solution to address problems and I truly believe in continuous learning and teamwork.\\
+        \vspace{0.5cm}
+        \rule{\linewidth}{0.4pt} \\
+      
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INFO
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Personal info}
+        \vspace{0.3 cm} \\
+        \section*{\normalsize Personal info}
+        \begin{tabularx}{\textwidth}{cY}
+            %\faUser{} & \small Portuguese, Male, 29yo \\
+            \faMapMarker{} & \small  Lisbon, Portugal \\
+            \faPhone{} & \small  (+351) 968824424 \\
+            \faEnvelope{} & \small \href{mailto:joserocha94@outlook.com}{joserocha94@outlook.com} \\
+            %\faSkype {} & \small joserocha94 \\
+        \end{tabularx}
+        \vspace{0.5cm} \\
+        \rule{\linewidth}{0.4pt} \\
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BACKGROUND
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Links}
+        \vspace{0.3 cm} \\
+        \section*{\normalsize Background}
+        \begin{tabular}{cl}
+            \faUniversity{} & \small \href{https://www.uevora.pt/}{BsC Computer Science} \\
+            \faUniversity{} & \small \href{https://tecnico.ulisboa.pt/pt/}{MsC Eletrical and Computer Science}\\ 
+        \end{tabular}
+        \vspace{0.5cm} \\
+        \rule{\linewidth}{0.4pt} \\
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INTEREST AREAS
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Skills}
+        \vspace{0.3 cm} \\
+        \section*{\normalsize Interest Areas}
+        \begin{tabularx}{\textwidth}{cY}
+            \faInfo{} & \small Software Engineering, Software Development, Programming, Algorithms, Data Structures, Distributed Systems, DevOps, Machine Learning \\
+        \end{tabularx}
+        \vspace{0.5cm} \\
+        \rule{\linewidth}{0.4pt}
+        
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SKILLS
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Skills}
+        \vspace{0.3 cm} \\
+        \section*{\normalsize Technical Skills}
+        \begin{tabularx}{\textwidth}{cY}
+            \faCode{} & \small C\#, SQL, SQL, Python, Java, C/C++, Javascript, Bash, Yaml \\
+            \faLaptopCode{} & \small .Net Framework, .Net Core, SqlServer, Microservices, WebServices, API's \\
+            \faToolbox{} & \small Visual Studio, Git, TFS, Azure, Elastic Stack, Sonarqube
+        \end{tabularx}
+        \vspace{0.5cm} \\
+        \rule{\linewidth}{0.4pt}
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LINKS
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Links}
+        \section*{\normalsize Links}
+        \begin{tabular}{cl}
+            \faLinkedin{} & \small \href{https://www.linkedin.com/in/joserocha94/}{joserocha94} \\
+            \faGithub{} & \small \href{https://github.com/joserocha94}{joserocha94} \\
+        \end{tabular}
+        \vspace{0.5cm} \\
+ 
+    \end{minipage}
+}
+\hfill
+\fcolorbox{red}{mainbg}{%
+    \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.6\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{maintext}
+        
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% WORK EXPERIENCE
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Work Experience}
+        \section*{\scshape\Large Work Experience \rule{\linewidth}{0.4pt}}
+%
+        % Cofidis
+        {\large \textbf{Cofidis Portugal}}\\
+        \vspace{.10cm} \\ 
+        {{\fontseries{medium}\selectfont Software Engineer, Software Architect}}\\
+        {\scshape\fontseries{light}\selectfont\footnotesize 2022 \textendash{} Present} 
+        \vspace{.15cm} \\       
+        {\footnotesize \faAngleRight & Working as a Software Developer and then as a Software Architect, I had an increasingly broader, more in-depth, demanding and exciting scope of responsibilities.} \\
+        \vspace{.10cm} \\ 
+        {\footnotesize \faAngleRight & Integrated on an (essentially) back end, under Agile Methodologies, with a highly sparsed growing technical environment I had responsibilities such as:
+        \vspace{.10cm} \\ 
+        \begin{itemize}
+            \setlength{\itemsep}{-2pt}
+            \item Define, design and implement architectures, systems, applications or business processes;
+            \item Ensurance of premises such as security, performance, integrity, scalability, reliability;
+            \item Troubleshoot, debug, maintain, document, upgrade or code review applications, services and database processes according to principles such as Solid and Clean Code;
+            \item Assurance of autonomous processes of continuous integration and continuous delivery for +150 apps;
+        \end{itemize}} 
+        {\footnotesize \textbf{Tech Stack:} Azure DevOps, CI/CD, Git, Elastic Stack (ELK), Sonarqube, .NET Framework, ASP.NET, SQL, C#}
+        \vspace{0.5cm} \\         
+        
+        % MIND SOURCE
+        {\large \textbf{Mind Source}} \\
+        \vspace{.10cm} \\ 
+        {{\fontseries{medium}\selectfont Cosultant}}\\
+        {\scshape\fontseries{light}\selectfont\footnotesize 2016 \textendash{} 2021} 
+        \vspace{.15cm} \\  
+        {\footnotesize \faAngleRight & During my time at Mind Source I had responsibilities as trainee, junior consultant and consultant.}
+        \vspace{.10cm} \\       
+        {\footnotesize \faAngleRight & With a strong program aimed at the development and evolution of skills, I worked on both internal and client projects with a permanent assignment. \\As a Full-Stack developer,
+        I had challenges such as: 
+        \vspace{.10cm} \\ 
+        \begin{itemize}
+            \setlength{\itemsep}{-2pt}
+            \item Design and implement business processes and interfaces according demands or needs identified by the business areas of the client;
+            \item Development of internal applications and webservices;
+            \item Product development;
+        \end{itemize}}
+        {\footnotesize \textbf{Tech Stack:} .NET Framework, ASP.NET, SQL, C\#, Full-Stack Development, Visual Basic .NET (VB.NET), MVC, WPF Development, Windows Forms, SQL Server Integration Services (SSIS), SQL Server Reporting Services (SSRS), JS, XML, JSON, HTML/CSS}
+      
+        %\vspace{0.5cm} \\ 
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EDUCATION
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Education}
+        \section*{\scshape\Large Education \rule{\linewidth}{0.4pt}}
+
+        {\large \textbf{Instituto Superior Técnico\\ MsC, Eletrical and Computer Engineering}} \\
+        {\fontseries{light}\footnotesize 2019 } \\
+        \vspace{.15cm} \\        
+        {\fontseries{light}\footnotesize - Major: Networks and Communication Systems 
+        \\- Minor: Computing Systems} \\
+        \vspace{.15cm} \\    
+        {\footnotesize \faAngleRight & Relevant Courses and topics: Network Algorithms, Algorithms Optimization, Distributed Systems, Information Systems, Parallel and Distributed Programming, Artificial Intelligence, Machine Learning;} \\
+        \vspace{.10cm} \\   
+        {\footnotesize \faAngleRight & Master Thesis: loading}
+
+        \vspace{.5cm} \\
+        {\large \textbf{Universidade de Évora \\ BsC, Computer Science}} \\
+        {\fontseries{light}\footnotesize 2012 \textendash{} 2016} \\
+        \vspace{.15cm} \\
+        {\footnotesize \faAngleRight & Software development and algorithm design oriented-learning in Python, Java and C languages. General knowledge of Assembly, Prolog, HTML, CSS, UML, SQL and PostgreSQL.} \\
+        \vspace{.10cm} \\   
+        {\footnotesize \faAngleRight & Content learning in areas such as Web Development, Computer Networking, Artificial Inteligence, Computer Graphics, Compilers, Architectures and Computer Systems. Use of tools and work development enviroments such as Python IDE, Assembler, LogiSim, SPSS, Visual Paradigm, Eclipse, DrJava and NetBeans. Knowledge on Windows and Linux.} \\
+        \vspace{.10cm} \\   
+        {\footnotesize \faAngleRight & Knowledge in cross-cutting areas such as Maths, Algebra, Physics, English and Management.}
+
+        {\hfill\small\fontseries{extralight}\selectfont Page \thepage of \pageref{LastPage}\hfill}
+    \end{minipage}
+}%
+\newpage
+\end{document}
